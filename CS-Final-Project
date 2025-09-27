@@ -1,0 +1,92 @@
+#include<iostream>
+using namespace std;
+
+float calculateAverage(float g1, float g2, float g3, float g4, float g5){
+		average = g1+ g2+ g3 + g4 + g5+ / 5;
+		
+	}
+	float findHighest(float g1, float g2, float g3, float g4, float g5){
+		if (g2<g1 && g3< g1 && g4<g1 && g5<g1){
+			cout<<"Highest: Math";
+		}
+		else if (g1<g2 && g3< g2 && g4<g2 && g5<g2){
+			cout<<"HIGHEST: SCIENCE";
+		}
+		else if (g1<g3 && g2< g3 && g4<g3 && g5<g3){
+			cout<<"HIGHEST: English ";
+		}
+		else if (g1<g4 && g2< g4 && g3<g4 && g5<g4){
+			cout<<"HIGHEST: history";
+		} 
+		else (g1<g5 && g2< g5 && g3<g5 && g4<g5){
+			cout<<"HIGHEST: SCIENCE";
+		}
+		
+	}
+	
+	float findLowest(float g1, float g2, float g3, float g4, float g5)
+			if (g2>g1 && g3> g1 && g4>g1 && g5>g1){
+			cout<<"Highest: Math";
+		}
+		else if (g1>g2 && g3> g2 && g4>g2 && g5>g2){
+			cout<<"HIGHEST: SCIENCE";
+		}
+		else if (g1>g3 && g2>g3 && g4>g3 && g5>g3){
+			cout<<"HIGHEST: English ";
+		}
+		else if (g1>g4 && g2> g4 && g3>g4 && g5>g4){
+			cout<<"HIGHEST: history";
+		} 
+		else (g1>g5 && g2>g5 && g3>g5 && g4>g5){
+			cout<<"HIGHEST: SCIENCE";
+		}
+	float getGrade(float average){
+		
+		// Mun, could u do this part pleaseee
+		
+	}
+		int countPassing(float g1, float g2, float g3, float g4, float g5)
+	//jadee, kani imohaaa
+	
+
+	
+	
+int main(){
+	string name; 
+	int id, age, glvl; 
+	
+		//dont do if else, mag try ta to use a function to check if its a valid input as said in instruction
+		// we do gwa converter BEFORE dl checker
+	
+		//pa change sa variable names plesss like from g1 and g2 to math grade and english grade and yess
+		// Thank uuuuu
+
+	cout<<"ENTER NAME: ";
+	cin>>name; 
+	cout<<"ENTER ID NUMBER: ";
+	cin>>id;
+	cout<<"ENTER AGE: ";
+	cin>>age;
+	cout<<"ENTER GRADE LEVEL: ";
+	cin>>glvl;
+	
+	cout<<"ENTER GRADE IN SAID SUBJECTS"<<endl;
+	cout<<"MATH: "<<endl;
+	cin>>g1; 
+	cout<<"SCIENCE: "<<endl;
+	cin>>g2; 
+	cout<<"ENGLISH: "<<endl;
+	cin>>g3; 
+	cout<<"HISTORY: "<<endl; 
+	cin>>g4;
+	cout<<"ART: "<<endl;
+	cin>>g5; 
+	
+	// if subjects input is valid, then proceed to output
+	//else, restart using do while loop 
+	
+	
+	
+	
+	
+}

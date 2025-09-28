@@ -40,11 +40,7 @@ float calculateAverage(float g1, float g2, float g3, float g4, float g5){
 		else (g1>g5 && g2>g5 && g3>g5 && g4>g5){
 			cout<<"HIGHEST: SCIENCE";
 		}
-	float getGrade(float average){
-		
-		// Mun, could u do this part pleaseee
-		
-	}
+	c
 		int countPassing(float g1, float g2, float g3, float g4, float g5)
 	//jadee, kani imohaaa
 	

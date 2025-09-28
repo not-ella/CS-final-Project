@@ -41,6 +41,39 @@ float calculateAverage(float g1, float g2, float g3, float g4, float g5){
 			cout<<"HIGHEST: SCIENCE";
 		}
 
+float getGrade(float average){
+		if (average>= 96.0 && average<= 100.0){ //96-100
+			cout<<"Grade Equivalent: 1.0";
+		}
+		else if (average>= 94.0 && average< 96.0){ //94-95
+			cout<<"Grade Equivalent: 1.25";
+		}
+		else if (average>= 92.0 && average< 94.0){ //92-93
+			cout<<"Grade Equivalent: 1.5";
+		}
+		else if (average>= 90.0 && average< 92.0){ //90-91
+			cout<<"Grade Equivalent: 1.75";
+		}
+		else if (average>= 88.0 && average< 90.0){ //88-90
+			cout<<"Grade Equivalent: 2.00";
+		}
+		else if (average>= 86.0 && average< 88.0){ //86-87
+			cout<<"Grade Equivalent: 2.25";
+		}
+		else if (average>= 84.0 && average< 86.0){ //84-85
+			cout<<"Grade Equivalent: 2.5";
+		}
+		else if (average>= 82.0 && average< 84.0){ //82-83
+			cout<<"Grade Equivalent: 2.75";
+		}
+		else if (average>= 80.0 && average< 82.0){ //80-81
+			cout<<"Grade Equivalent: 3.0";
+		}
+		else{ //BELOW 80
+			cout<<"Grade Equivalent: 5.0";
+		}
+	}
+
 		int countPassing(float g1, float g2, float g3, float g4, float g5)
 	//jadee, kani imohaaa
 	

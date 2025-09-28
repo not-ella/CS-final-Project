@@ -1,96 +1,125 @@
-#include<iostream>
+#include <iostream>
 #include <iomanip>
 #include <string>
-
 using namespace std;
 
-float calculateAverage(float g_Sci, float g_Math, float g_Eng, float g_Art, float g_hstry){
-		average = g_Sci + g_Math + g_Eng + g_Art + g_hstry+ / 5.0;
-		}
+// calculate average
+float calculateAverage(float g_Sci, float g_Math, float g_Eng, float g_Art, float g_hstry) {
+    return (g_Sci + g_Math + g_Eng + g_Art + g_hstry) / 5.0f;
+}
 
-//this part of the code is needed to find the highest grade out of the 5
+// find highest
 float findHighest(float g_Sci, float g_Math, float g_Eng, float g_Art, float g_hstry) {
-    float highest = g_hstry;
-    if (g_Sci > highest) highest = g_Sci;
+    float highest = g_Sci;
     if (g_Math > highest) highest = g_Math;
     if (g_Eng > highest) highest = g_Eng;
     if (g_Art > highest) highest = g_Art;
+    if (g_hstry > highest) highest = g_hstry;
     return highest;
 }
 
-//this part of the code is needed to find the lowest grade out of the 5
-	float findLowest(float g_Sci, float g_Math, float g_Eng, float g_Art, float g_hstry)
-			if (g_Math>g_Sci && g_Eng> g_Sci && g_Art>g_Sci && g_hstry>g_Sci){
-			cout<<"Lowest: Math";
-		}
-		else if (g_Sci>g_Math && g_Eng>g_Math && g_Art>g_Math && g_hstry>g_Math){
-			cout<<"Lowest: SCIENCE";
-		}
-		else if (g_Sci>g_Eng && g_Math>g_Eng && g_Art>g_Eng && g_hstry>g_Eng){
-			cout<<"Lowest: English ";
-		}
-		else if (g_Sci>g_Art && g_Math> g_Art && g_Eng>g_Art && g_hstry>g_Art){
-			cout<<"Lowest: history";
-		} 
-		else (g_Sci>g_hstry && g_Math>g_hstry && g_Eng>g_hstry && g_Art>g_hstry){
-			cout<<"Lowest: SCIENCE";
-		}
-
-float getGwa(float average) {
-    if (average >= 96) return 1.0;
-    if (average >= 94) return 1.25;
-    if (average >= 92) return 1.5;
-    if (average >= 90) return 1.75;
-    if (average >= 88) return 2.0;
-    if (average >= 86) return 2.25;
-    if (average >= 84) return 2.5;
-    if (average >= 82) return 2.75;
-    if (average >= 80) return 3.0;
-    return 5.0;
+// find lowest
+float findLowest(float g_Sci, float g_Math, float g_Eng, float g_Art, float g_hstry) {
+    float lowest = g_Sci;
+    if (g_Math < lowest) lowest = g_Math;
+    if (g_Eng < lowest) lowest = g_Eng;
+    if (g_Art < lowest) lowest = g_Art;
+    if (g_hstry < lowest) lowest = g_hstry;
+    return lowest;
 }
 
-		int countPassing(float g1, float g2, float g3, float g4, float g5)
-	//jadee, kani imohaaa
-	
+// grade equivalent
+float getGwa(float average) {
+    if (average >= 96) return 1.0f;
+    if (average >= 94) return 1.25f;
+    if (average >= 92) return 1.5f;
+    if (average >= 90) return 1.75f;
+    if (average >= 88) return 2.0f;
+    if (average >= 86) return 2.25f;
+    if (average >= 84) return 2.5f;
+    if (average >= 82) return 2.75f;
+    if (average >= 80) return 3.0f;
+    return 5.0f;
+}
 
-	
-	
-int main(){
-	string name; 
-	int id, age, glvl; 
-	
-		//dont do if else, mag try ta to use a function to check if its a valid input as said in instruction
-		// we do gwa converter BEFORE dl checker
-	
-		//pa change sa variable names plesss like from g1 and g2 to math grade and english grade and yess
-		// Thank uuuuu
+// count passing subjects (>=75 considered passing)
+int countPassing(float g1, float g2, float g3, float g4, float g5) {
+  //jadee this one ples
 
-	cout<<"ENTER NAME: ";
-	cin>>name; 
-	cout<<"ENTER ID NUMBER: ";
-	cin>>id;
-	cout<<"ENTER AGE: ";
-	cin>>age;
-	cout<<"ENTER GRADE LEVEL: ";
-	cin>>glvl;
-	
-	cout<<"ENTER GRADE IN SAID SUBJECTS"<<endl;
-	cout<<"MATH: "<<endl;
-	cin>>g1; 
-	cout<<"SCIENCE: "<<endl;
-	cin>>g2; 
-	cout<<"ENGLISH: "<<endl;
-	cin>>g3; 
-	cout<<"HISTORY: "<<endl; 
-	cin>>g4;
-	cout<<"ART: "<<endl;
-	cin>>g5; 
-	
-	// if subjects input is valid, then proceed to output
-	//else, restart using do while loop 
-	
-	
-	
-	
-	
+// get valid grade
+float getGrade(const string& subject) {
+    float grade;
+    do {
+        cout << "Enter " << subject << " grade (0-100): ";
+        cin >> grade;
+        if (grade < 0 || grade > 100) {
+            cout << "Invalid input. Please enter a grade between 0 and 100." << endl;
+        }
+    } while (grade < 0 || grade > 100);
+    return grade;
+}
+
+// Director’s List check
+bool checkDirectorsList(float gwa) {
+    return (gwa <= 1.5f);
+}
+
+int main() {
+    string name;
+    int id, age, g_Level;
+
+    cout << "Enter name: ";
+    cin >> name;
+    cout << "Enter ID number: ";
+    cin >> id;
+    cout << "Enter age: ";
+    cin >> age;
+    cout << "Enter grade level: ";
+    cin >> g_Level;
+
+    // grade entry
+    cout << "\nGRADE ENTRY\n" << endl;
+    float sci = getVGrade("Science");
+    float eng = getGrade("English");
+    float art = getGrade("Art");
+    float math = getGrade("Math");
+    float hstry = getGrade("History");
+
+    float average = calculateAverage(sci, math, eng, art, hstry);
+    float highest = findHighest(sci, math, eng, art, hstry);
+    float lowest = findLowest(sci, math, eng, art, hstry);
+    int passing = countPassing(sci, math, eng, art, hstry);
+    float gwa = getGwa(average);
+
+    cout << "\nSTUDENT INFORMATION\n" << endl;
+    cout << "Name: " << name << endl;
+    cout << "ID: " << id << endl;
+    cout << "Age: " << age << " years old" << endl;
+    cout << "Grade level: " << g_Level << endl;
+    cout << "Birth year: " << (2025 - age) << endl;
+
+    cout << "\nSUBJECT GRADES:\n" << endl;
+    cout << "Math: " << math << "%" << endl;
+    cout << "Science: " << sci << "%" << endl;
+    cout << "English: " << eng << "%" << endl;
+    cout << "History: " << hstry << "%" << endl;
+    cout << "Art: " << art << "%" << endl;
+
+    cout << "\nGRADE STATISTICS:\n" << endl;
+    cout << fixed << setprecision(2);
+    cout << "Average grade: " << average << "%" << endl;
+    cout << "Grade Equivalent: " << gwa << endl;
+    cout << "Highest grade: " << highest << "%" << endl;
+    cout << "Lowest grade: " << lowest << "%" << endl;
+    cout << "Passed: " << passing << " out of 5 subjects" << endl;
+
+    cout << "\nGWA: " << gwa << endl;
+
+    if (checkDirectorsList(gwa)) {
+        cout << "Director's List Status: yeaas" << endl;
+    } else {
+        cout << "Director's List Status: no :((" << endl;
+    }
+
+    return 0;
 }

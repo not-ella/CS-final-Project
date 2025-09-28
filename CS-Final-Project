@@ -1,78 +1,53 @@
 #include<iostream>
+#include <iomanip>
+#include <string>
+
 using namespace std;
 
-float calculateAverage(float g1, float g2, float g3, float g4, float g5){
-		average = g1+ g2+ g3 + g4 + g5+ / 5;
-		
-	}
-	float findHighest(float g1, float g2, float g3, float g4, float g5){
-		if (g2<g1 && g3< g1 && g4<g1 && g5<g1){
-			cout<<"Highest: Math";
-		}
-		else if (g1<g2 && g3< g2 && g4<g2 && g5<g2){
-			cout<<"HIGHEST: SCIENCE";
-		}
-		else if (g1<g3 && g2< g3 && g4<g3 && g5<g3){
-			cout<<"HIGHEST: English ";
-		}
-		else if (g1<g4 && g2< g4 && g3<g4 && g5<g4){
-			cout<<"HIGHEST: history";
-		} 
-		else (g1<g5 && g2< g5 && g3<g5 && g4<g5){
-			cout<<"HIGHEST: SCIENCE";
-		}
-		
-	}
-	
-	float findLowest(float g1, float g2, float g3, float g4, float g5)
-			if (g2>g1 && g3> g1 && g4>g1 && g5>g1){
-			cout<<"Highest: Math";
-		}
-		else if (g1>g2 && g3> g2 && g4>g2 && g5>g2){
-			cout<<"HIGHEST: SCIENCE";
-		}
-		else if (g1>g3 && g2>g3 && g4>g3 && g5>g3){
-			cout<<"HIGHEST: English ";
-		}
-		else if (g1>g4 && g2> g4 && g3>g4 && g5>g4){
-			cout<<"HIGHEST: history";
-		} 
-		else (g1>g5 && g2>g5 && g3>g5 && g4>g5){
-			cout<<"HIGHEST: SCIENCE";
+float calculateAverage(float g_Sci, float g_Math, float g_Eng, float g_Art, float g_hstry){
+		average = g_Sci + g_Math + g_Eng + g_Art + g_hstry+ / 5.0;
 		}
 
-float getGrade(float average){
-		if (average>= 96.0 && average<= 100.0){ //96-100
-			cout<<"Grade Equivalent: 1.0";
+//this part of the code is needed to find the highest grade out of the 5
+float findHighest(float g_Sci, float g_Math, float g_Eng, float g_Art, float g_hstry) {
+    float highest = g_hstry;
+    if (g_Sci > highest) highest = g_Sci;
+    if (g_Math > highest) highest = g_Math;
+    if (g_Eng > highest) highest = g_Eng;
+    if (g_Art > highest) highest = g_Art;
+    return highest;
+}
+
+//this part of the code is needed to find the lowest grade out of the 5
+	float findLowest(float g_Sci, float g_Math, float g_Eng, float g_Art, float g_hstry)
+			if (g_Math>g_Sci && g_Eng> g_Sci && g_Art>g_Sci && g_hstry>g_Sci){
+			cout<<"Lowest: Math";
 		}
-		else if (average>= 94.0 && average< 96.0){ //94-95
-			cout<<"Grade Equivalent: 1.25";
+		else if (g_Sci>g_Math && g_Eng>g_Math && g_Art>g_Math && g_hstry>g_Math){
+			cout<<"Lowest: SCIENCE";
 		}
-		else if (average>= 92.0 && average< 94.0){ //92-93
-			cout<<"Grade Equivalent: 1.5";
+		else if (g_Sci>g_Eng && g_Math>g_Eng && g_Art>g_Eng && g_hstry>g_Eng){
+			cout<<"Lowest: English ";
 		}
-		else if (average>= 90.0 && average< 92.0){ //90-91
-			cout<<"Grade Equivalent: 1.75";
+		else if (g_Sci>g_Art && g_Math> g_Art && g_Eng>g_Art && g_hstry>g_Art){
+			cout<<"Lowest: history";
+		} 
+		else (g_Sci>g_hstry && g_Math>g_hstry && g_Eng>g_hstry && g_Art>g_hstry){
+			cout<<"Lowest: SCIENCE";
 		}
-		else if (average>= 88.0 && average< 90.0){ //88-90
-			cout<<"Grade Equivalent: 2.00";
-		}
-		else if (average>= 86.0 && average< 88.0){ //86-87
-			cout<<"Grade Equivalent: 2.25";
-		}
-		else if (average>= 84.0 && average< 86.0){ //84-85
-			cout<<"Grade Equivalent: 2.5";
-		}
-		else if (average>= 82.0 && average< 84.0){ //82-83
-			cout<<"Grade Equivalent: 2.75";
-		}
-		else if (average>= 80.0 && average< 82.0){ //80-81
-			cout<<"Grade Equivalent: 3.0";
-		}
-		else{ //BELOW 80
-			cout<<"Grade Equivalent: 5.0";
-		}
-	}
+
+float getGrade(float average) {
+    if (average >= 96) return 1.0;
+    if (average >= 94) return 1.25;
+    if (average >= 92) return 1.5;
+    if (average >= 90) return 1.75;
+    if (average >= 88) return 2.0;
+    if (average >= 86) return 2.25;
+    if (average >= 84) return 2.5;
+    if (average >= 82) return 2.75;
+    if (average >= 80) return 3.0;
+    return 5.0;
+}
 
 		int countPassing(float g1, float g2, float g3, float g4, float g5)
 	//jadee, kani imohaaa

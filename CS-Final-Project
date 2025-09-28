@@ -43,8 +43,15 @@ float getGwa(float average) {
 }
 
 // count passing subjects (>=75 considered passing)
-int countPassing(float g1, float g2, float g3, float g4, float g5) {
-  //jadee this one ples
+int countPassing(float g_Sci, float g_Math, float g_Eng, float g_Art, float g_hstry) {
+    int passCount = 0;
+    if (g_Sci >= 75) passCount++;
+    if (g_Math >= 75) passCount++;
+    if (g_Eng >= 75) passCount++;
+    if (g_Art >= 75) passCount++;
+    if (g_hstry >= 75) passCount++;
+    return passCount; 
+}
 
 // get valid grade
 float getGrade(const string& subject) {

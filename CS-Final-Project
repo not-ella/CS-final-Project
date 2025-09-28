@@ -36,7 +36,7 @@ float findHighest(float g_Sci, float g_Math, float g_Eng, float g_Art, float g_h
 			cout<<"Lowest: SCIENCE";
 		}
 
-float getGrade(float average) {
+float getGwa(float average) {
     if (average >= 96) return 1.0;
     if (average >= 94) return 1.25;
     if (average >= 92) return 1.5;

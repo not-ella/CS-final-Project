@@ -131,4 +131,4 @@ int main() {
     return 0;
 }
 
-//This code demonstrates modular programming in which it organizes tasks into reusable functions, it uses a do-while loop for input validation to ensure only valid grades are accepted, and it also applies stream manipulator from <iomanip> to neatly format numeric output with two decimal places
+// This code demonstrates modular programming in which it organizes tasks into reusable functions, it uses a do-while loop for input validation to ensure only valid grades are accepted, and it also applies stream manipulator from <iomanip> to neatly format numeric output with two decimal places
